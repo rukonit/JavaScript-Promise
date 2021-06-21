@@ -23,3 +23,6 @@ cleanRoom().then((result) => {
 }).then((result) => {
 	console.log('finished ' + result);
 })
+.catch((err) => {
+console.log(err)
+})
