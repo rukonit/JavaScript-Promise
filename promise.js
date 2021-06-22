@@ -26,3 +26,21 @@ cleanRoom().then((result) => {
 .catch((err) => {
 console.log(err)
 })
+
+
+//Second way
+
+function completeTask(message) {
+    return new Promise((resolve, reject) => {setTimeout(()=> {resolve(message)}, 2000)})
+}
+
+completeTask('Washed')
+.then((data)=>{
+    console.log(data);
+    return completeTask(data + ', Removed Garbase')
+}).then((data)=>{
+    console.log(data);
+    return completeTask(data + ' and Got Reward')
+}).then((data)=>{
+    console.log(data);
+})
